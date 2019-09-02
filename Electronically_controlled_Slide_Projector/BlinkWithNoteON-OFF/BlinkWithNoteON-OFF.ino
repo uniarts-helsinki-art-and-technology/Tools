@@ -1,9 +1,13 @@
-// note durations in millisecons in pairs of note on and note off:
+// note durations in milliseconds in pairs of note on and note off:
+// every second time is for changing the slide (approx 200 ms. should be fine)
 int noteDurations[] = {
-  4000, 1000, 200, 4000,
-  200, 4000, 200, 4000
+  4000, 1000, // slide1
+  200, 4000,  // slide2
+  200, 4000,  // slide3
+  200, 4000
 };
 
+// total number of numbers in array
 int noteNumber = 8;
 
 int thisNote = 0;
