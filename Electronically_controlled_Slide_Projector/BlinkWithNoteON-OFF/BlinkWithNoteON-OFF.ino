@@ -3,10 +3,11 @@
 // Set the following times!
 
 // note durations in milliseconds in pairs of note on and note off:
-// every second time is for changing the slide (approx 200 ms. should be fine for KODAK CAROUSEL 2050)
+// first time is for changing the slide (approx 200 ms. should be fine for KODAK CAROUSEL 2050)
+// second time defines how long the slide will be displayed
 
 int noteDurations[] = {
-  200, 1000, // slide1
+  200, 1000,  // slide1
   200, 4000,  // slide2
   200, 4000,  // slide3
   200, 4000   // etc
@@ -44,18 +45,12 @@ void loop() {
   
   digitalWrite(LED_BUILTIN, HIGH);                  // turn ON (HIGH is the voltage level)
   
-  Serial.print("thisNote: ");                       // write some information to console
-  Serial.print(thisNote);                           // write some information to console
-  Serial.print(" noteDuration1 ");                  // write some information to console
-  Serial.println(noteDuration1);                    // write some information to console
-  
   delay(noteDuration1);                       // time for change time
   
   digitalWrite(LED_BUILTIN, LOW);             // turn OFF (by making the voltage LOW)
-  
-  Serial.println(noteDuration2);              // write some information to console
-  
+    
   delay(noteDuration2);                       // Show slide for specified time
+  
   thisNote = thisNote + 2;
 
 }
