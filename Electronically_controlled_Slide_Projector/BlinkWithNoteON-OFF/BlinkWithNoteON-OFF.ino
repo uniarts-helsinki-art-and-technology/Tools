@@ -9,7 +9,7 @@ int noteDurations[] = {
   200, 1000, // slide1
   200, 4000,  // slide2
   200, 4000,  // slide3
-  200, 4000
+  200, 4000   // etc
 };
 
 
@@ -25,10 +25,9 @@ int startNote = 0;  // start the array from 0
 
 // the setup function runs once when you press reset or power the board
 void setup() {
-  // open the serial port at 9600 bps:
-  Serial.begin(9600);
-  // initialize digital pin LED_BUILTIN as an output.
-  pinMode(LED_BUILTIN, OUTPUT);
+  
+  Serial.begin(9600);              // open the serial port at 9600 bps:
+  pinMode(LED_BUILTIN, OUTPUT);    // initialize digital pin LED_BUILTIN as an output.
 
   noteNumber =  sizeof(noteDurations); // set the total number of notes according to the array
 }
@@ -45,16 +44,16 @@ void loop() {
   
   digitalWrite(LED_BUILTIN, HIGH);                  // turn ON (HIGH is the voltage level)
   
-  Serial.print("thisNote: ");
-  Serial.print(thisNote);
-  Serial.print(" noteDuration1 ");
-  Serial.println(noteDuration1);
+  Serial.print("thisNote: ");                       // write some information to console
+  Serial.print(thisNote);                           // write some information to console
+  Serial.print(" noteDuration1 ");                  // write some information to console
+  Serial.println(noteDuration1);                    // write some information to console
   
   delay(noteDuration1);                       // time for change time
   
   digitalWrite(LED_BUILTIN, LOW);             // turn OFF (by making the voltage LOW)
   
-  Serial.println(noteDuration2);
+  Serial.println(noteDuration2);              // write some information to console
   
   delay(noteDuration2);                       // Show slide for specified time
   thisNote = thisNote + 2;
