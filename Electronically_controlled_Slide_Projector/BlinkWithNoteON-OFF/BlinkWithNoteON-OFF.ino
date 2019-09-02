@@ -1,9 +1,10 @@
 
 // SETUP
-// Set the following times
+// Set the following times!
 
 // note durations in milliseconds in pairs of note on and note off:
 // every second time is for changing the slide (approx 200 ms. should be fine)
+
 int noteDurations[] = {
   4000, 1000, // slide1
   200, 4000,  // slide2
@@ -12,12 +13,15 @@ int noteDurations[] = {
 };
 
 
-// DON'T CHANGE THIS
+// ------------------------------------------------------------------------
+// ------------------------------------------------------------------------
+// ------------------------------------------------------------------------
+// YOU DON'T NEED TO CHANGE THE FOLLOWING LINES
 
-// total number of numbers in array
-int noteNumber;
-// start the array from
-int thisNote = 0;
+int noteNumber;     // total number of notes
+int thisNote = 0;   // current slide number
+int startNote = 0;  // start the array from 0
+
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -26,27 +30,33 @@ void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
 
-  noteNumber =  sizeof(noteDurations);
+  noteNumber =  sizeof(noteDurations); // set the total number of notes according to the array
 }
 
 // the loop function runs over and over again forever
 void loop() {
 
-  if (thisNote > noteNumber - 2) {
-    thisNote = 0;
+  if (thisNote > noteNumber - 2) {                // LOOP (if the all values are read, start from 0)
+    thisNote = startNote;
   }
 
-  int noteDuration1 = noteDurations[thisNote];
-  int noteDuration2 = noteDurations[thisNote + 1];
-  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  int noteDuration1 = noteDurations[thisNote];      // read data value from array
+  int noteDuration2 = noteDurations[thisNote + 1];  // read another data value from array
+  
+  digitalWrite(LED_BUILTIN, HIGH);                  // turn ON (HIGH is the voltage level)
+  
   Serial.print("thisNote: ");
   Serial.print(thisNote);
   Serial.print(" noteDuration1 ");
   Serial.println(noteDuration1);
-  delay(noteDuration1);
-  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  
+  delay(noteDuration1);                       // time for change time
+  
+  digitalWrite(LED_BUILTIN, LOW);             // turn OFF (by making the voltage LOW)
+  
   Serial.println(noteDuration2);
-  delay(noteDuration2);                       // wait for a second
+  
+  delay(noteDuration2);                       // Show slide for specified time
   thisNote = thisNote + 2;
 
 }
