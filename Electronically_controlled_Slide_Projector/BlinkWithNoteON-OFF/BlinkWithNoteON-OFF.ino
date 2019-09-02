@@ -1,3 +1,7 @@
+
+// SETUP
+// Set the following times
+
 // note durations in milliseconds in pairs of note on and note off:
 // every second time is for changing the slide (approx 200 ms. should be fine)
 int noteDurations[] = {
@@ -7,9 +11,12 @@ int noteDurations[] = {
   200, 4000
 };
 
-// total number of numbers in array
-int noteNumber = 8;
 
+// DON'T CHANGE THIS
+
+// total number of numbers in array
+int noteNumber;
+// start the array from
 int thisNote = 0;
 
 // the setup function runs once when you press reset or power the board
@@ -18,6 +25,8 @@ void setup() {
   Serial.begin(9600);
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
+
+  noteNumber =  sizeof(noteDurations);
 }
 
 // the loop function runs over and over again forever
