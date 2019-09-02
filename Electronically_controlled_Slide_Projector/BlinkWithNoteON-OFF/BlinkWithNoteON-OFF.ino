@@ -3,7 +3,7 @@
 // Set the following times!
 
 // note durations in milliseconds in pairs of note on and note off:
-// every second time is for changing the slide (approx 200 ms. should be fine)
+// every second time is for changing the slide (approx 200 ms. should be fine for KODAK CAROUSEL 2050)
 
 int noteDurations[] = {
   200, 1000, // slide1
