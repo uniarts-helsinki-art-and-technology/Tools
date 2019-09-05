@@ -1,8 +1,6 @@
 import dmxP512.*;
 import processing.serial.*;
 
-int lightIntensity = 0; // between 0 - 255, minimi teho 0, maksimi teho 255
-
 DmxP512 dmxOutput;
 int universeSize=128;
 
@@ -12,6 +10,8 @@ String LANBOX_IP="192.168.1.77";
 boolean DMXPRO=true;
 String DMXPRO_PORT="/dev/tty.usbserial-1431410";//case matters ! on windows port must be upper cased.
 int DMXPRO_BAUDRATE=115000;
+
+int lightIntensity = 1; // between 0 - 255, minimi teho 0, maksimi teho 255
 int lightIncrement = 1;
 
 void setup() {
@@ -32,11 +32,11 @@ void setup() {
 
 void draw() {    
   
-  if (lightIntensity>254) {    
+  if (lightIntensity>=255) {    
     lightIncrement *= -1;
   }
 
-  if (lightIntensity<0) {
+  if (lightIntensity<=0) {
     lightIncrement *= -1;
   }    
   
