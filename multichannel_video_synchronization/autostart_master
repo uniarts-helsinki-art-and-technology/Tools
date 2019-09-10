@@ -1,0 +1,6 @@
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@xscreensaver -no-splash
+@point-rpi
+//@bash /home/pi/sketchbook/heidi_ReceiveTriggerOnGPIO/application.linux-armv6hf/heidi_ReceiveTriggerOnGPIO
+@bash /home/pi/Desktop/rpScriptOMX_Python_Processing_Master.sh
