@@ -36,7 +36,7 @@ void setup() {
  // noteNumber =  sizeof(noteDurations); // set the total number of notes according to the array
   int sizeOfMyArray = sizeof(noteDurations)/sizeof(int);
   noteNumber =  sizeOfMyArray; // set the total number of notes according to the array
-
+  Serial.print(noteNumber);
 }
 
 // the loop function runs over and over again forever
