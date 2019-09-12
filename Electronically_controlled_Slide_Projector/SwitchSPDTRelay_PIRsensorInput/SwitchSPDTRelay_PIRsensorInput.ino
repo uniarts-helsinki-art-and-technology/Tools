@@ -9,7 +9,6 @@ const int ledPin = 12;
 
 // Variables will change:
 int switchState = LOW;         // the current state of the output pin
-int buttonState;             // the current reading from the input pin
 
 // the following variables are unsigned longs because the time, measured in
 // milliseconds, will quickly become a bigger number than can be stored in an int.
