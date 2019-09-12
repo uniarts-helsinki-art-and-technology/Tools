@@ -33,7 +33,7 @@ const int switchPowerProjector = 12;
 const int relayPin = 8;
 
 // Variables will change:
-int switchProjectorState = LOW;         // the current state of the output pin
+int switchProjectorState = HIGH;         // the current state of the output pin
 
 int reading = 0;
 
@@ -52,6 +52,9 @@ void setup() {
   int sizeOfMyArray = sizeof(noteDurations) / sizeof(int);
   noteNumber =  sizeOfMyArray; // set the total number of notes according to the array
   Serial.print(noteNumber);
+
+  // give some time to the projector to be up & running
+  delay(5000);
 }
 
 // the loop function runs over and over again forever
@@ -82,16 +85,13 @@ void loop() {
       if (analogReading > 200) {
         currentLoop--;
       }
-
     }
   }
   else {
-
     if (switchProjectorState == HIGH) {
       switchProjectorState = LOW;
       digitalWrite(switchPowerProjector, switchProjectorState);   // switch off the projector
     }
-
     int analogReading = analogRead(A0);
     if (analogReading > 200) {
       switchProjectorState = HIGH;
@@ -100,7 +100,6 @@ void loop() {
       delay (5000);
       currentLoop = 1;
     }
-
   }
 
   Serial.print("currentLoop ");
