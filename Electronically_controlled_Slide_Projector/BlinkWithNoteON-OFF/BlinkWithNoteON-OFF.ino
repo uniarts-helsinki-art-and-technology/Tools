@@ -1,4 +1,7 @@
 
+
+#define ARRAY_SIZE(array) ((sizeof(array))/(sizeof(int)))
+
 // SETUP
 // Set the following times!
 
@@ -30,7 +33,10 @@ void setup() {
   Serial.begin(9600);              // open the serial port at 9600 bps:
   pinMode(LED_BUILTIN, OUTPUT);    // initialize digital pin LED_BUILTIN as an output.
 
-  noteNumber =  sizeof(noteDurations); // set the total number of notes according to the array
+ // noteNumber =  sizeof(noteDurations); // set the total number of notes according to the array
+  int sizeOfMyArray = sizeof(noteDurations)/sizeof(int);
+  noteNumber =  sizeOfMyArray; // set the total number of notes according to the array
+  Serial.print(noteNumber);
 }
 
 // the loop function runs over and over again forever
