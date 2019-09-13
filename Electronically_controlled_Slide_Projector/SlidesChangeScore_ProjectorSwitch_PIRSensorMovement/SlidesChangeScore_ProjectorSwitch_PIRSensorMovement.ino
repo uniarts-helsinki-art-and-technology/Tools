@@ -33,7 +33,10 @@ const int switchPowerProjector = 12;
 const int relayPin = 8;
 
 // Variables will change:
-int switchProjectorState = HIGH;         // the current state of the output pin
+
+// NOTE!!! the logic is inverted so LOW means projector On and viceversa
+
+int switchProjectorState = LOW;         // the current state of the output pin
 
 int reading = 0;
 
@@ -88,13 +91,13 @@ void loop() {
     }
   }
   else {
-    if (switchProjectorState == HIGH) {
-      switchProjectorState = LOW;
+    if (switchProjectorState == LOW) {
+      switchProjectorState = HIGH;
       digitalWrite(switchPowerProjector, switchProjectorState);   // switch off the projector
     }
     int analogReading = analogRead(A0);
     if (analogReading > 200) {
-      switchProjectorState = HIGH;
+      switchProjectorState = LOW;
       digitalWrite(switchPowerProjector, switchProjectorState);   // switch on the projector
       // wait some seconds before starting the sequence
       delay (5000);
