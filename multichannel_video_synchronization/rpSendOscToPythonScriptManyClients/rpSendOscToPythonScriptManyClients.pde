@@ -34,13 +34,9 @@ String s ="";
 boolean pause = true;
 color c = color (0);
 
-void settings() {
-  size(3*displayWidth>>2, 3*displayHeight>>2);
-  
-}
 
 void setup() {
-  //size(1800, 900);
+  size(1800, 900, P2D);
   surface.setLocation(0, 0);
   /* start oscP5, listening for incoming messages at port 12000 */
   oscP5 = new OscP5(this, 12000);
