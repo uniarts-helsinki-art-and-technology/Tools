@@ -19,7 +19,7 @@ dBus_scriptPath = "/home/pi/Desktop/dbuscontrol.sh"
 
 os.system("hostname -I")
 print("started python script to receive OSC commands on port " + str(port))
-processingAppPath = "/home/pi/sketchbook/rpSendOscToPythonScriptManyClients/application.linux-arm64/rpSendOscToPythonScriptManyClients"
+processingAppPath = "/home/pi/sketchbook/rpSendOscToPythonScriptManyClients/application.linux-armv6hf/rpSendOscToPythonScriptManyClients"
 # using os impedes the execution of the rest of the program
 #os.system("bash " + processingAppPath)
 
