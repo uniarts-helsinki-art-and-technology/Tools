@@ -28,7 +28,7 @@ Export your files as .mp4. The video files should be compatible with omxplayer. 
 ## Setup
 
 The following instructions will guide through installing video players.
-For general guidelines to setup Raspberries, please follow the instructions here. You should have all Raspberries installed before continuing the intallation to the following steps.
+For general guidelines to setup Raspberries, please follow the instructions here. You should have all Raspberries installed before continuing the installation to the following steps.
 
 
 ## Setup Client player:
@@ -38,14 +38,15 @@ For general guidelines to setup Raspberries, please follow the instructions here
 1. Download files from Github
 1.1. Save "rpMessage-rcv_client.py" file to Desktop
 1.2. Save "dbuscontrol.sh" file to Desktop
+1.3 Download and Install pytone/pyOsc from: https://github.com/ptone/pyosc
 
-
-2. Check the ip address for client player: 
+2. Check the ip address for client player:
 2.1. Open Terminal (Accesories > Terminal)
 2.2. Type "hostname -I" to terminal and read the ip address
 2.3. You will need the ip address in the step X.X
 
 3. Copy your video file to each pi's home folder and rename it "video.mp4".
+
 
 
 ## Setup Master player
@@ -65,10 +66,10 @@ For general guidelines to setup Raspberries, please follow the instructions here
 6. Make sure that you have all players connected via LAN cable (turn off wifi, bluetooth etc.).
 
 7. Start the client player(s)
-7.1. Start by typing: 
+7.1. Start by typing:
 
 8. Start the master player
-8.1. Start by typing: 
+8.1. Start by typing:
 
 9. When master is started all videos should jump to the end of the video and then start looping in sync.
 
@@ -100,10 +101,9 @@ Install netatalk for convenience:
 2. Install netatalk
 2.1. Open Terminal (Accesories > Terminal)
 2.2. Type: sudo apt-get install netatalk
-3. Check the ip address: 
+3. Check the ip address:
 3.1. Open Terminal (Accesories > Terminal)
 3.2. Type "hostname -I" to terminal and read the ip address
 4. Connect from other computer (MAC)
 4.1 Select: Finder —> Go to.. —> Connect to server
 4.2. Type the ip address of the Raspberry Pi ( e.g afp://195.148.109.234)
-
