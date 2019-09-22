@@ -54,21 +54,29 @@ For general guidelines to setup Raspberries, please follow the instructions here
 5. Start up Raspberry
 
 5.1. Setup the Processing code
+
 5.1.1. Download files from Github
+
 5.1.2. Save "rpMessage-rcv_master.py" file to Desktop
 
 5.2. Setup Processing code
+
 5.2.1. Copy "rpSendOscToPythonScriptManyClients" folder to Desktop
+
 5.2.2. Open Processing sketch "rpSendOscToPythonScriptManyClients.pde"
+
 5.2.3. Check the client ip address (step 2.) and type the correct address to Processing sketch. If you use multiple client players write all the ip addresses to the array.
+
 5.2.4. Check the video lenght (in seconds??) and type it to Processing sketch. Make sure that you type the lenght of the content that wish to be visible and have approx. 10 sec. of extra footage in the video file.
 
 6. Make sure that you have all players connected via LAN cable (turn off wifi, bluetooth etc.).
 
 7. Start the client player(s)
+
 7.1. Start by typing:
 
 8. Start the master player
+
 8.1. Start by typing:
 
 9. When master is started all videos should jump to the end of the video and then start looping in sync.
