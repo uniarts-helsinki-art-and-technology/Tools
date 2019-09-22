@@ -77,7 +77,7 @@ For general guidelines to setup Raspberries, please follow the instructions here
 
 8. Start the master player
 
-8.1. Start by typing:
+    8.1. Start by typing:
 
 9. When master is started all videos should jump to the end of the video and then start looping in sync.
 
