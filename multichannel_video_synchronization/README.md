@@ -102,7 +102,7 @@ Note! You can't exit from the client's video player without having the master ab
 
 *********************************************************************************************
 *********************************************************************************************
-CAN WE ADD DISABLE WIFI AND BLUETOOTH IN THE AUTOSTART FILE????
+<!--CAN WE ADD DISABLE WIFI AND BLUETOOTH IN THE AUTOSTART FILE????-->
 
 
 
