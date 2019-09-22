@@ -36,14 +36,20 @@ For general guidelines to setup Raspberries, please follow the instructions here
 1. Start up Raspberry
 
 1. Download files from Github
-1.1. Save "rpMessage-rcv_client.py" file to Desktop
-1.2. Save "dbuscontrol.sh" file to Desktop
-1.3 Download and Install pytone/pyOsc from: https://github.com/ptone/pyosc
+
+    1.1. Save "rpMessage-rcv_client.py" file to Desktop
+
+    1.2. Save "dbuscontrol.sh" file to Desktop
+    
+    1.3 Download and Install pytone/pyOsc from: https://github.com/ptone/pyosc
 
 2. Check the ip address for client player:
-2.1. Open Terminal (Accesories > Terminal)
-2.2. Type "hostname -I" to terminal and read the ip address
-2.3. You will need the ip address in the step X.X
+
+   2.1. Open Terminal (Accesories > Terminal)
+
+    2.2. Type "hostname -I" to terminal and read the ip address
+
+    2.3. You will need the ip address in the step X.X
 
 3. Copy your video file to each pi's home folder and rename it "video.mp4".
 
@@ -53,27 +59,27 @@ For general guidelines to setup Raspberries, please follow the instructions here
 
 5. Start up Raspberry
 
-5.1. Setup the Processing code
+    5.1. Setup the Processing code
 
-5.1.1. Download files from Github
+        5.1.1. Download files from Github
 
-5.1.2. Save "rpMessage-rcv_master.py" file to Desktop
+        5.1.2. Save "rpMessage-rcv_master.py" file to Desktop
 
-5.2. Setup Processing code
+    5.2. Setup Processing code
 
-5.2.1. Copy "rpSendOscToPythonScriptManyClients" folder to Desktop
+        5.2.1. Copy "rpSendOscToPythonScriptManyClients" folder to Desktop
 
-5.2.2. Open Processing sketch "rpSendOscToPythonScriptManyClients.pde"
+        5.2.2. Open Processing sketch "rpSendOscToPythonScriptManyClients.pde"
 
-5.2.3. Check the client ip address (step 2.) and type the correct address to Processing sketch. If you use multiple client players write all the ip addresses to the array.
+        5.2.3. Check the client ip address (step 2.) and type the correct address to Processing sketch. If you use multiple client players write all the ip addresses to the array.
 
-5.2.4. Check the video lenght (in seconds??) and type it to Processing sketch. Make sure that you type the lenght of the content that wish to be visible and have approx. 10 sec. of extra footage in the video file.
+        5.2.4. Check the video lenght (in seconds??) and type it to Processing sketch. Make sure that you type the lenght of the content that wish to be visible and have approx. 10 sec. of extra footage in the video file.
 
 6. Make sure that you have all players connected via LAN cable (turn off wifi, bluetooth etc.).
 
 7. Start the client player(s)
 
-7.1. Start by typing:
+    7.1. Start by typing:
 
 8. Start the master player
 
