@@ -49,7 +49,7 @@ For general guidelines to setup Raspberries, please follow the instructions here
 
     2.2. Type "hostname -I" to terminal and read the ip address
 
-    2.3. You will need the ip address in the step X.X
+    2.3. You will need the ip address in the step 5.2.3.
 
 3. Copy your video file to each pi's home folder and rename it "video.mp4".
 
@@ -65,7 +65,7 @@ For general guidelines to setup Raspberries, please follow the instructions here
 
         5.1.2. Save "rpMessage-rcv_master.py" file to Desktop
 
-    5.2. Setup Processing code
+    5.2. Setup Processing code (Processing is required for the next steps)
 
         5.2.1. Copy "rpSendOscToPythonScriptManyClients" folder to Desktop
 
@@ -73,7 +73,7 @@ For general guidelines to setup Raspberries, please follow the instructions here
 
         5.2.3. Check the client ip address (step 2.) and type the correct address to Processing sketch. If you use multiple client players write all the ip addresses to the array.
 
-        5.2.4. Check the video lenght (in seconds??) and type it to Processing sketch. Make sure that you type the lenght of the content that wish to be visible and have approx. 10 sec. of extra footage in the video file.
+        5.2.4. Check the video length (in seconds) and type it to Processing sketch. Make sure that you type the length of the content that wish to be visible and have approx. 10 sec. of extra footage in the video file.
 
 6. Make sure that you have all players connected via LAN cable (turn off wifi, bluetooth etc.).
 
@@ -124,13 +124,24 @@ Install netatalk for convenience:
 
 
 
-## instructions
+## Instructions
 
-click with mouse to center of the screen on master
+Prepare videos:
+1. include 10 seconds of extra footage in the end of all videos
+2. use Handbrake with preset "Fast 1080p 30" to convert videos
 
 
-use the following keycodes:
-esc to exit
+To stop player:
+1. Click with mouse to center of the screen on master player
+2. press esc to exit
+
+Exit client players
+1. open terminal in startup
+2. write "pkill omxplayer" (blindfold)
+
 
 default video path
 /home/pi/video.mp4
+
+default processing app path
+/
