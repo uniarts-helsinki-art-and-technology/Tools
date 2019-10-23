@@ -121,3 +121,11 @@ Install netatalk for convenience:
 4. Connect from other computer (MAC)
 4.1 Select: Finder —> Go to.. —> Connect to server
 4.2. Type the ip address of the Raspberry Pi ( e.g afp://195.148.109.234)
+
+
+
+## instructions
+
+use the following keycodes:
+
+
