@@ -40,7 +40,7 @@ For general guidelines to setup Raspberries, please follow the instructions here
     1.1. Save "rpMessage-rcv_client.py" file to Desktop
 
     1.2. Save "dbuscontrol.sh" file to Desktop
-    
+
     1.3 Download and Install pytone/pyOsc from: https://github.com/ptone/pyosc
 
 2. Check the ip address for client player:
@@ -126,6 +126,11 @@ Install netatalk for convenience:
 
 ## instructions
 
+click with mouse to center of the screen on master
+
+
 use the following keycodes:
+esc to exit
 
-
+default video path
+/home/pi/video.mp4
