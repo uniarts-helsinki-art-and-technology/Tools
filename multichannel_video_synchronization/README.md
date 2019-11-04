@@ -40,7 +40,7 @@ For general guidelines to setup Raspberries, please follow the instructions here
     1.1. Save "rpMessage-rcv_client.py" file to Desktop
 
     1.2. Save "dbuscontrol.sh" file to Desktop
-    
+
     1.3 Download and Install pytone/pyOsc from: https://github.com/ptone/pyosc
 
 2. Check the ip address for client player:
@@ -49,7 +49,7 @@ For general guidelines to setup Raspberries, please follow the instructions here
 
     2.2. Type "hostname -I" to terminal and read the ip address
 
-    2.3. You will need the ip address in the step X.X
+    2.3. You will need the ip address in the step 5.2.3.
 
 3. Copy your video file to each pi's home folder and rename it "video.mp4".
 
@@ -65,7 +65,7 @@ For general guidelines to setup Raspberries, please follow the instructions here
 
         5.1.2. Save "rpMessage-rcv_master.py" file to Desktop
 
-    5.2. Setup Processing code
+    5.2. Setup Processing code (Processing is required for the next steps)
 
         5.2.1. Copy "rpSendOscToPythonScriptManyClients" folder to Desktop
 
@@ -73,7 +73,7 @@ For general guidelines to setup Raspberries, please follow the instructions here
 
         5.2.3. Check the client ip address (step 2.) and type the correct address to Processing sketch. If you use multiple client players write all the ip addresses to the array.
 
-        5.2.4. Check the video lenght (in seconds??) and type it to Processing sketch. Make sure that you type the lenght of the content that wish to be visible and have approx. 10 sec. of extra footage in the video file.
+        5.2.4. Check the video length (in seconds) and type it to Processing sketch. Make sure that you type the length of the content that wish to be visible and have approx. 10 sec. of extra footage in the video file.
 
 6. Make sure that you have all players connected via LAN cable (turn off wifi, bluetooth etc.).
 
@@ -121,3 +121,27 @@ Install netatalk for convenience:
 4. Connect from other computer (MAC)
 4.1 Select: Finder —> Go to.. —> Connect to server
 4.2. Type the ip address of the Raspberry Pi ( e.g afp://195.148.109.234)
+
+
+
+## Instructions
+
+Prepare videos:
+1. include 10 seconds of extra footage in the end of all videos
+2. use Handbrake with preset "Fast 1080p 30" to convert videos
+
+
+To stop player:
+1. Click with mouse to center of the screen on master player
+2. press esc to exit
+
+Exit client players
+1. open terminal in startup
+2. write "pkill omxplayer" (blindfold)
+
+
+default video path
+/home/pi/video.mp4
+
+default processing app path
+/
