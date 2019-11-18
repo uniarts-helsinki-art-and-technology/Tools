@@ -28,7 +28,9 @@ Export your files as .mp4. The video files should be compatible with omxplayer. 
 ## Setup
 
 The following instructions will guide through installing video players.
-For general guidelines to setup Raspberries, please follow the instructions here. You should have all Raspberries installed before continuing the installation to the following steps.
+
+For general guidelines to setup Raspberries, please follow the instructions here: https://www.raspberrypi.org/documentation/installation/installing-images/README.md
+You should have all Raspberries installed before continuing the installation to the following steps.
 
 
 ## Setup Client player:
@@ -51,7 +53,7 @@ For general guidelines to setup Raspberries, please follow the instructions here
 
     2.3. You will need the ip address in the step 5.2.3.
 
-3. Copy your video file to each pi's home folder and rename it "video.mp4".
+3. Copy your video file to each pi's home "/home/pi" folder and rename it "video.mp4".
 
 
 
@@ -74,6 +76,8 @@ For general guidelines to setup Raspberries, please follow the instructions here
         5.2.3. Check the client ip address (step 2.) and type the correct address to Processing sketch. If you use multiple client players write all the ip addresses to the array.
 
         5.2.4. Check the video length (in seconds) and type it to Processing sketch. Make sure that you type the length of the content that wish to be visible and have approx. 10 sec. of extra footage in the video file.
+        
+        5.2.5. Export Processing application
 
 6. Make sure that you have all players connected via LAN cable (turn off wifi, bluetooth etc.).
 
