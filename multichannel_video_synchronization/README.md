@@ -73,10 +73,12 @@ You should have all Raspberries installed before continuing the installation to 
 
         5.2.2. Open Processing sketch "rpSendOscToPythonScriptManyClients.pde"
 
+        5.2.3. Install libraries: CountdownTimer, oscP5, controlP5
+
         5.2.3. Check the client ip address (step 2.) and type the correct address to Processing sketch. If you use multiple client players write all the ip addresses to the array.
 
         5.2.4. Check the video length (in seconds) and type it to Processing sketch. Make sure that you type the length of the content that wish to be visible and have approx. 10 sec. of extra footage in the video file.
-        
+
         5.2.5. Export Processing application
 
 6. Make sure that you have all players connected via LAN cable (turn off wifi, bluetooth etc.).
@@ -98,6 +100,8 @@ You should have all Raspberries installed before continuing the installation to 
 To create a standalone system for exhibition purpose, it is a good idea to make video players start automatically when they are powered.
 
 Note! You can't exit from the client's video player without having the master able to control it. Please make sure that you have tested the whole system before setting up the autostart.
+
+Note! use arm6h on RasPi
 
 1. To modify the autostart, you should copy /etc/xdg/ to ~/.config/lxsession/LXDE-pi/autostart
 (The version in the home directory will be used instead of the one in /etc/xdg/...)
@@ -140,8 +144,8 @@ To stop player:
 2. press esc to exit
 
 Exit client players
-1. open terminal in startup
-2. write "pkill omxplayer" (blindfold)
+1. open terminal in startup or press CRTL+ALT+T
+2. write "sudo killall omxplayer.bin" (blindfold)
 
 
 default video path
